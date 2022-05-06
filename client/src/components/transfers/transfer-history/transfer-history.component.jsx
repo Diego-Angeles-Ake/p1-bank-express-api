@@ -9,12 +9,6 @@ import TransferItem from '../transfer-item/transfer-item.component';
 
 import classes from './transfer-history.module.css';
 
-const transfers = [
-  { id: 't1', amount: 200, date: '2022-4-12', user: 'Max' },
-  { id: 't2', amount: 500, date: '2022-5-20', user: 'Joe' },
-  { id: 't3', amount: 700, date: '2022-6-4', user: 'John' },
-];
-
 const TransferHistory = () => {
   const user = useSelector((state) => state.users.user);
 

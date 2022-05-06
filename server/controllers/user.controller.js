@@ -1,11 +1,12 @@
+// Encrypt
 const bcrypt = require('bcryptjs');
-const { Op } = require('sequelize');
+// Helpers
 const { genAccNum } = require('../helpers/account-number.helper');
 const { AppError } = require('../helpers/app-error.helper');
 const { catchAsync } = require('../helpers/catch-async.helper');
+// Models
 const { Transfer } = require('../models/transfer.model');
 const { User } = require('../models/user.model');
-// require('crypto').randomBytes(64).toString('hex')
 
 const signUp = catchAsync(async (req, res, next) => {
   const { name, password } = req.body;

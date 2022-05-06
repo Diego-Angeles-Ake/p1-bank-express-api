@@ -4,11 +4,7 @@ const { Transfer } = require('../models/transfer.model');
 const { User } = require('../models/user.model');
 
 const createTransfer = catchAsync(async (req, res, next) => {
-  const {
-    amount: amountToTransfer,
-    senderUserId,
-    /* receiverUserId */ receiverAccount,
-  } = req.body;
+  const { amount: amountToTransfer, senderUserId, receiverAccount } = req.body;
 
   const sender = await User.findOne({
     where: {
